@@ -1,5 +1,5 @@
 {% set name = "mudirac" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/muon-spectroscopy-computational-project/mudirac/archive/refs/tags/{{ version }}.tar.gz
-  sha256: d1ae58f138c18c6f515ac08267608054f89d85ac5564d2587b18363f1f634823
+  sha256: 2c24995368de8f7692de86afaf73a6071f1e5cefb7b81e990b389c9346f505c1
 
 build:
   number: 0
