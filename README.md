@@ -14,9 +14,15 @@ Development: https://github.com/muon-spectroscopy-computational-project/mudirac
 Documentation: https://muon-spectroscopy-computational-project.github.io/mudirac/
 
 MuDirac is a simulation software that integrates the Dirac equation for muonic atoms to compute their X-Ray transition energies;
-it is written in C++.  The use and functioning of MuDirac 1.0 is extensively documented in the paper [S. Sturniolo, A. Hillier,
+it is written in C++.
+
+Version 1.3.0 introduces 2-parameter Fermi (2pF) nuclear charge distribution optimisation.
+
+The use and functioning of MuDirac is documented in the paper [S. Sturniolo, A. Hillier,
 “Mudirac: A Dirac equation solver for elemental analysis with muonic X-rays”, X-Ray Spectrom. 2020;1–17](https://onlinelibrary.wiley.com/doi/full/10.1002/xrs.3212),
-which should be cited by any work using it.
+and the 2pF optimisation in the paper [L. Liborio, M. Kumar, S. Devadasan, P. Jones, M. Plummer, A. Hillier, A. Bartok,"MuDirac 1.3.0: A Sustainable Software Tool
+for Calculating Ground State Nuclear Properties Using Muonic X-Ray Measurements", arXiv:2605.00554 (2026)](https://arxiv.org/abs/2605.00554).
+Both papers should be cited by any work using this software.
 
 
 Current build status
@@ -24,31 +30,6 @@ Current build status
 
 
 <table>
-    
-  <tr>
-    <td>Azure</td>
-    <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=22161&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mudirac-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=22161&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/mudirac-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
-    </td>
-  </tr>
 </table>
 
 Current release info
@@ -127,12 +108,12 @@ it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -159,7 +140,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/mudirac-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
