@@ -21,6 +21,8 @@ requirements:
     - {{ stdlib("c") }}
     - cmake
     - make
+  host:
+    - ceres-solver
 
 test:
   commands: mudirac --help
